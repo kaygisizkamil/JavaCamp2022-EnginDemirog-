@@ -1,0 +1,32 @@
+
+
+function App(){
+   const[logged,setLogged]=useState(false);
+       const handleGiris=e=>{
+		e.preventDefault();
+/*validation yapmadan kullanıcı başarıyla giriş yaptı varsayıyorum*/
+		setLogged(true);
+	}
+{/*sartlı  blok olarak giris butonunu ornek gosterebiliriz frontend kısmında reac kullanıldıgını varsaydım ornek gosterebilmek icin*/
+/*kullanıcı giris yaptıysa butonsuz giris yaptıysa butonlu sayfa render ediliyor
+tabiki giris kısmında databaseden kullanıcı bilgilerinin eslesip eslesmediginin validationu yapiliyor
+dogru formatta giris yapılıp yapılmadıgı client side -eslesip eslesmedigi ise server side validation ile yapıldıgın dusunuyorum*/
+return(
+	{logged} ?<GirisSayfasiButonsuz/> :<GirisSayfasiButonlu>
+			<form>
+			{/*diger form elemanları geliyor*/}
+			<Button id={giris} type="button" onClick={e => this.handleGiris(e)}>
+			<form/>
+);
+}
+
+<form>
+{/*diger form elemanları geliyor*/}
+<Button id={giris} type="button" onClick={e => this.handleGiris(e)}>
+<form/>
+
+/*dongu kısmında ise sepete ürün eklendikten sonra eklenen urunler bir string arraye kaydedilip sonrasında array icinde iterate ederek
+ekrana output olarak yansıtılıyor olabilir ama benim dusuncem veriler veri tabanına kaydedildikten sonra kullanıcı tarafında gostermek icin gerekli
+api vasitasiyoa front end kendi tarafında kullanmak istediginde döngü kullanmaya gerek kalmadan map edebilir -sepettekileri silmek icinse
+aynı sekilde mapping kullailabilir cunku asil amac veri tabanındaki datayı silmek degil array.map methodu ile arrayin kopyasını olusturup onun üzerinde
+islem yapmak olabilir*/
