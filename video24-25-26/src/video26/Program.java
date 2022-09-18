@@ -13,8 +13,15 @@ public class Program {
 		//String kelime="merhaba" seklinde atama yaparak tekrar deneyip farký görebilirsiniz
 		String kelime=new String("merhaba");
 		deneme(kelime);
+		System.out.println(kelime);
+		degistir(kelime);//kelime degismedi
+		System.out.println(kelime);
 	
 	}	
+	public static void degistir(String kelime) {
+		kelime="sfsdfsd0";
+				
+	}
 	public static void print(String... kelimeler) {
 		for(String tmp:kelimeler) {
 			System.out.print(tmp+" ");
