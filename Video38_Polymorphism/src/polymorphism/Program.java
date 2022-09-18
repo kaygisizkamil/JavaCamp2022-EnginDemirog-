@@ -22,7 +22,11 @@ public class Program {
 		Oracle oracle=new Oracle();
 		db=oracle;
 		((Oracle) db).Ekstra();*/
-		
+		DatabaseAdministrator[] db={new DatabaseAdministrator(new MangoDb()),new DatabaseAdministrator(new Oracle())};
+		for(DatabaseAdministrator tmp: db) {
+			//tmp.Yazdir(); base classdaki yazdir methodu cagrilir neden ??
+			tmp.Add();
+		}
 		
 		
 		
