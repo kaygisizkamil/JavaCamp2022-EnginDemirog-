@@ -2,6 +2,7 @@ package btk20FileOperations;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -29,6 +30,7 @@ public class Program {
 		catch(IOException e) {
 			e.printStackTrace();
 		}
+		
 		getFileInfo(file);
 		
 		Map<String,String>myMap=new HashMap<>();
@@ -64,9 +66,11 @@ public class Program {
 	                + k + ", Value = " + v));
 	        
 	        System.out.println(myMap.size());
-	        writeFile(file);
-	        myMap.clear();
+	         writeFile(file);
+	      //  myMap.clear();
 	        readFile(myMap,file);
+	        myMap.forEach((k,v) -> System.out.println("Key = "
+	                + k + ", Value = " + v));
 	}
 	 
 	public static void getFileInfo(File file) {
